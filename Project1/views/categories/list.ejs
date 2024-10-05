@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+<h1>Category List</h1>
+<a href="/categories/create" class="btn btn-primary">Create New Category</a>
+<div class="w-75 m-auto m-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Category Name</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <% categories.forEach(category => { %>
+            <tr>
+                <th scope="row"> <%= category.name %></th>
+                <td>
+                    <form action="/categories/delete/<%= category.id %>" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+<%- include('../partials/footer') %>

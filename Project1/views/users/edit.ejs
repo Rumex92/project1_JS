@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<form action="/users/edit/<%= user.id %>" method="POST" class="w-50 m-auto p-5 mt-5 shadow">
+    <h2>Edit User</h2>
+    <div class="mb3">
+        <input type="name" placeholder="name****" value="<%= user.name %>" name="name" class="form-control" required>
+    </div>
+    <div class="mb3">
+        <input type="email" placeholder="Email****" value="<%= user.email %>" name="name" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-primaty">Login</button>
+    <a href="/register" class="">Don't have an account? Register Here</a>
+</form>
+<%- include('../partials/footer') %>

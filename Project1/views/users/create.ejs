@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<form action="/users/create" method="POST" class="w-50 p-5 mt-5 shadow m-auto">
+    <h2>Create New User</h2>
+    <div class="mb-3">
+        <input type="text" name="name" placeholder="Name..." class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <input type="email" name="email" placeholder="Email..." class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <input type="password" name="password" placeholder="Password..." class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+<%- include('../partials/footer') %>
